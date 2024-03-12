@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/DataStructure/LineList.c
+vsadmin.h
+-
+stdio.h
+E:/DataStructure/stdio.h
+stdlib.h
+E:/DataStructure/stdlib.h
+
