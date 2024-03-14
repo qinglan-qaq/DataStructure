@@ -49,7 +49,8 @@ Status InsertList(SqList *L, int i, int value) {
 }
 
 //删除
-Status DeleteList(SqList *L, int i, int *value) {
+Status DeleteList(SqList *L, int i) {
+    int value;
 //    判断i位置是否合法
     if (i > L->length + 1 || i < 1) {
         printf("Error Location\n");
@@ -60,7 +61,7 @@ Status DeleteList(SqList *L, int i, int *value) {
         return False;
     };
     value = L->data[i - 1];
-    printf("The deleted value is%d\n", value);
+    printf("The deleted value is %d\n", value);
 //    从i开始往后,覆盖掉想要删除的元素
     for (int j = i; j < L->length; j++) {
         L->data[j - 1] = L->data[j];
@@ -125,6 +126,9 @@ int main() {
         switch (c) {
             case 1:
                 InitList(&L);
+                for (int i = 1;i<MaxSize;i ++){
+                    InsertList(&L,i,i);
+                }
                 break;
             case 2:
                 printf("what element do you want search by Value?\n");
@@ -144,7 +148,7 @@ int main() {
             case 5:
                 printf("what element do you want delete?\n");
                 scanf("%d%d",&Location,&value);
-                DeleteList(&L,Location,value);
+                DeleteList(&L,Location);
                 break;
             case 6:
                 ShowAll(L);
@@ -157,6 +161,5 @@ int main() {
                 break;
         }
     }
-    printf("Here is LineList!");
     return 0;
 }
