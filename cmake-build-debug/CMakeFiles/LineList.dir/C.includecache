@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 E:/DataStructure/LineList.c
-vsadmin.h
--
 stdio.h
 E:/DataStructure/stdio.h
 stdlib.h
