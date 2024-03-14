@@ -72,8 +72,10 @@ CMAKE_BINARY_DIR = E:\DataStructure\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/LineList_Point.dir/all
 all: CMakeFiles/DataStructure.dir/all
 all: CMakeFiles/LineList.dir/all
+all: CMakeFiles/LineList_DynamicAllocation.dir/all
 
 .PHONY : all
 
@@ -83,10 +85,39 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/LineList_Point.dir/clean
 clean: CMakeFiles/DataStructure.dir/clean
 clean: CMakeFiles/LineList.dir/clean
+clean: CMakeFiles/LineList_DynamicAllocation.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/LineList_Point.dir
+
+# All Build rule for target.
+CMakeFiles/LineList_Point.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_Point.dir\build.make CMakeFiles/LineList_Point.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_Point.dir\build.make CMakeFiles/LineList_Point.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\DataStructure\cmake-build-debug\CMakeFiles --progress-num=7,8 "Built target LineList_Point"
+.PHONY : CMakeFiles/LineList_Point.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/LineList_Point.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\DataStructure\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LineList_Point.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\DataStructure\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/LineList_Point.dir/rule
+
+# Convenience name for target.
+LineList_Point: CMakeFiles/LineList_Point.dir/rule
+
+.PHONY : LineList_Point
+
+# clean rule for target.
+CMakeFiles/LineList_Point.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_Point.dir\build.make CMakeFiles/LineList_Point.dir/clean
+.PHONY : CMakeFiles/LineList_Point.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/DataStructure.dir
@@ -141,6 +172,33 @@ LineList: CMakeFiles/LineList.dir/rule
 CMakeFiles/LineList.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList.dir\build.make CMakeFiles/LineList.dir/clean
 .PHONY : CMakeFiles/LineList.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/LineList_DynamicAllocation.dir
+
+# All Build rule for target.
+CMakeFiles/LineList_DynamicAllocation.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_DynamicAllocation.dir\build.make CMakeFiles/LineList_DynamicAllocation.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_DynamicAllocation.dir\build.make CMakeFiles/LineList_DynamicAllocation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\DataStructure\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target LineList_DynamicAllocation"
+.PHONY : CMakeFiles/LineList_DynamicAllocation.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/LineList_DynamicAllocation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\DataStructure\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/LineList_DynamicAllocation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\DataStructure\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/LineList_DynamicAllocation.dir/rule
+
+# Convenience name for target.
+LineList_DynamicAllocation: CMakeFiles/LineList_DynamicAllocation.dir/rule
+
+.PHONY : LineList_DynamicAllocation
+
+# clean rule for target.
+CMakeFiles/LineList_DynamicAllocation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_DynamicAllocation.dir\build.make CMakeFiles/LineList_DynamicAllocation.dir/clean
+.PHONY : CMakeFiles/LineList_DynamicAllocation.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named LineList_Point
+
+# Build rule for target.
+LineList_Point: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 LineList_Point
+.PHONY : LineList_Point
+
+# fast build rule for target.
+LineList_Point/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_Point.dir\build.make CMakeFiles/LineList_Point.dir/build
+.PHONY : LineList_Point/fast
+
+#=============================================================================
 # Target rules for targets named DataStructure
 
 # Build rule for target.
@@ -154,6 +167,19 @@ LineList: cmake_check_build_system
 LineList/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList.dir\build.make CMakeFiles/LineList.dir/build
 .PHONY : LineList/fast
+
+#=============================================================================
+# Target rules for targets named LineList_DynamicAllocation
+
+# Build rule for target.
+LineList_DynamicAllocation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 LineList_DynamicAllocation
+.PHONY : LineList_DynamicAllocation
+
+# fast build rule for target.
+LineList_DynamicAllocation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_DynamicAllocation.dir\build.make CMakeFiles/LineList_DynamicAllocation.dir/build
+.PHONY : LineList_DynamicAllocation/fast
 
 LineList.obj: LineList.c.obj
 
@@ -181,6 +207,60 @@ LineList.s: LineList.c.s
 LineList.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList.dir\build.make CMakeFiles/LineList.dir/LineList.c.s
 .PHONY : LineList.c.s
+
+LineList_DynamicAllocation.obj: LineList_DynamicAllocation.c.obj
+
+.PHONY : LineList_DynamicAllocation.obj
+
+# target to build an object file
+LineList_DynamicAllocation.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_DynamicAllocation.dir\build.make CMakeFiles/LineList_DynamicAllocation.dir/LineList_DynamicAllocation.c.obj
+.PHONY : LineList_DynamicAllocation.c.obj
+
+LineList_DynamicAllocation.i: LineList_DynamicAllocation.c.i
+
+.PHONY : LineList_DynamicAllocation.i
+
+# target to preprocess a source file
+LineList_DynamicAllocation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_DynamicAllocation.dir\build.make CMakeFiles/LineList_DynamicAllocation.dir/LineList_DynamicAllocation.c.i
+.PHONY : LineList_DynamicAllocation.c.i
+
+LineList_DynamicAllocation.s: LineList_DynamicAllocation.c.s
+
+.PHONY : LineList_DynamicAllocation.s
+
+# target to generate assembly for a file
+LineList_DynamicAllocation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_DynamicAllocation.dir\build.make CMakeFiles/LineList_DynamicAllocation.dir/LineList_DynamicAllocation.c.s
+.PHONY : LineList_DynamicAllocation.c.s
+
+LineList_Point.obj: LineList_Point.c.obj
+
+.PHONY : LineList_Point.obj
+
+# target to build an object file
+LineList_Point.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_Point.dir\build.make CMakeFiles/LineList_Point.dir/LineList_Point.c.obj
+.PHONY : LineList_Point.c.obj
+
+LineList_Point.i: LineList_Point.c.i
+
+.PHONY : LineList_Point.i
+
+# target to preprocess a source file
+LineList_Point.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_Point.dir\build.make CMakeFiles/LineList_Point.dir/LineList_Point.c.i
+.PHONY : LineList_Point.c.i
+
+LineList_Point.s: LineList_Point.c.s
+
+.PHONY : LineList_Point.s
+
+# target to generate assembly for a file
+LineList_Point.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_Point.dir\build.make CMakeFiles/LineList_Point.dir/LineList_Point.c.s
+.PHONY : LineList_Point.c.s
 
 main.obj: main.c.obj
 
@@ -219,9 +299,17 @@ help:
 	@echo ... rebuild_cache
 	@echo ... DataStructure
 	@echo ... LineList
+	@echo ... LineList_DynamicAllocation
+	@echo ... LineList_Point
 	@echo ... LineList.obj
 	@echo ... LineList.i
 	@echo ... LineList.s
+	@echo ... LineList_DynamicAllocation.obj
+	@echo ... LineList_DynamicAllocation.i
+	@echo ... LineList_DynamicAllocation.s
+	@echo ... LineList_Point.obj
+	@echo ... LineList_Point.i
+	@echo ... LineList_Point.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
