@@ -51,5 +51,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/LineList_Point.dir/DependInfo.cmake"
   "CMakeFiles/DataStructure.dir/DependInfo.cmake"
   "CMakeFiles/LineList.dir/DependInfo.cmake"
+  "CMakeFiles/SqStack.dir/DependInfo.cmake"
   "CMakeFiles/LineList_DynamicAllocation.dir/DependInfo.cmake"
   )

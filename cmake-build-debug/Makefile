@@ -169,6 +169,19 @@ LineList/fast:
 .PHONY : LineList/fast
 
 #=============================================================================
+# Target rules for targets named SqStack
+
+# Build rule for target.
+SqStack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SqStack
+.PHONY : SqStack
+
+# fast build rule for target.
+SqStack/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SqStack.dir\build.make CMakeFiles/SqStack.dir/build
+.PHONY : SqStack/fast
+
+#=============================================================================
 # Target rules for targets named LineList_DynamicAllocation
 
 # Build rule for target.
@@ -262,6 +275,33 @@ LineList_Point.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList_Point.dir\build.make CMakeFiles/LineList_Point.dir/LineList_Point.c.s
 .PHONY : LineList_Point.c.s
 
+SqStack.obj: SqStack.c.obj
+
+.PHONY : SqStack.obj
+
+# target to build an object file
+SqStack.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SqStack.dir\build.make CMakeFiles/SqStack.dir/SqStack.c.obj
+.PHONY : SqStack.c.obj
+
+SqStack.i: SqStack.c.i
+
+.PHONY : SqStack.i
+
+# target to preprocess a source file
+SqStack.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SqStack.dir\build.make CMakeFiles/SqStack.dir/SqStack.c.i
+.PHONY : SqStack.c.i
+
+SqStack.s: SqStack.c.s
+
+.PHONY : SqStack.s
+
+# target to generate assembly for a file
+SqStack.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SqStack.dir\build.make CMakeFiles/SqStack.dir/SqStack.c.s
+.PHONY : SqStack.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -301,6 +341,7 @@ help:
 	@echo ... LineList
 	@echo ... LineList_DynamicAllocation
 	@echo ... LineList_Point
+	@echo ... SqStack
 	@echo ... LineList.obj
 	@echo ... LineList.i
 	@echo ... LineList.s
@@ -310,6 +351,9 @@ help:
 	@echo ... LineList_Point.obj
 	@echo ... LineList_Point.i
 	@echo ... LineList_Point.s
+	@echo ... SqStack.obj
+	@echo ... SqStack.i
+	@echo ... SqStack.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

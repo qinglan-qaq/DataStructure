@@ -75,6 +75,7 @@ CMAKE_BINARY_DIR = E:\DataStructure\cmake-build-debug
 all: CMakeFiles/LineList_Point.dir/all
 all: CMakeFiles/DataStructure.dir/all
 all: CMakeFiles/LineList.dir/all
+all: CMakeFiles/SqStack.dir/all
 all: CMakeFiles/LineList_DynamicAllocation.dir/all
 
 .PHONY : all
@@ -88,6 +89,7 @@ preinstall:
 clean: CMakeFiles/LineList_Point.dir/clean
 clean: CMakeFiles/DataStructure.dir/clean
 clean: CMakeFiles/LineList.dir/clean
+clean: CMakeFiles/SqStack.dir/clean
 clean: CMakeFiles/LineList_DynamicAllocation.dir/clean
 
 .PHONY : clean
@@ -172,6 +174,33 @@ LineList: CMakeFiles/LineList.dir/rule
 CMakeFiles/LineList.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LineList.dir\build.make CMakeFiles/LineList.dir/clean
 .PHONY : CMakeFiles/LineList.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SqStack.dir
+
+# All Build rule for target.
+CMakeFiles/SqStack.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SqStack.dir\build.make CMakeFiles/SqStack.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SqStack.dir\build.make CMakeFiles/SqStack.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\DataStructure\cmake-build-debug\CMakeFiles --progress-num=9,10 "Built target SqStack"
+.PHONY : CMakeFiles/SqStack.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SqStack.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\DataStructure\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SqStack.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\DataStructure\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/SqStack.dir/rule
+
+# Convenience name for target.
+SqStack: CMakeFiles/SqStack.dir/rule
+
+.PHONY : SqStack
+
+# clean rule for target.
+CMakeFiles/SqStack.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SqStack.dir\build.make CMakeFiles/SqStack.dir/clean
+.PHONY : CMakeFiles/SqStack.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/LineList_DynamicAllocation.dir
