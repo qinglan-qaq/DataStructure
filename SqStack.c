@@ -28,8 +28,8 @@ Status Push(SqStack *s,int i ){
         printf("Push fail,stack is full\n");
         return False;
     }
-    s->data[s->top] = i;
     s->top += 1;
+    s->data[s->top] = i;
     printf("Push success\n");
     return True;
 }
@@ -55,6 +55,7 @@ Status GetTopElement(SqStack s){
         return False;
     }
      value = s.data[s.top];
+    printf("the Top element is %d\n",value);
     return True;
 }
 void ShowAllStack(SqStack s){
@@ -62,10 +63,9 @@ void ShowAllStack(SqStack s){
         printf("the Stack is empty!\n");
         
     }
-    while (s.top >= 0){
-//        注意终止条件
-        printf("Stack [ %d ] = %d\n",s.top,s.data[s.top]);
-        s.top -= 1;
+//    应该使用临时变量代替使用指针的变化
+    for (int i = s.top;i >= 0;i --){
+        printf("Stack [ %d ] = %d\n",i,s.data[i]);
     }
     printf("\n");
 }
